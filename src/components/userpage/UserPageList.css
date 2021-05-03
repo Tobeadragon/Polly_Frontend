@@ -1,0 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.UserPage{
+    
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding: 5px;
+    font-size: 2rem;
+    
+}

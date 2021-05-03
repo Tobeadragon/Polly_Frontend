@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.AuswertungsContainer{
+    list-style: none;
+    padding: 10px;
+    /* border: 1px solid blue; */
+    margin: 10px;
+    display: flex;
+    justify-content: stretch;
+    flex-direction: row;
+}
+
+.liststyle{
+    list-style: none;
+}
+
+.PieChart{
+    border: 1px solid black;
+    margin-left: 15px;
+    width: 250px;
+    background-color: burlywood;
+}
+
+@media screen and (max-width:780px){
+   .AuswertungsContainer{
+       flex-direction: column;
+   }
+
+
+
+}
