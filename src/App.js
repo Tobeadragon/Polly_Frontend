@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import Umfrage from "./components/umfrage/Umfrage";
 import Navbar from "./components/nav/Navbar";
-import Navbar2 from './components/nav/Navbar2'
+import Navbar2 from "./components/nav/Navbar2";
 import Main from "./components/main/Main";
 // import Danke from "./components/danke/Danke";
 import Login from "./components/Login";
@@ -13,10 +18,9 @@ import UserPage from "./components/userpage/UserPage";
 import NotFound from "./components/NotFound";
 import Auswertung from "./components/auswertung/Auswertung";
 import Home from "./components/home/Home";
-import SurveyTest from "./components/surveytest/SurveryTest"
-import TestList from './components/surveytest/TestList'
-import UmfrageTest from './components/umfrage/UmfrageTest'
-
+import SurveyTest from "./components/surveytest/SurveryTest";
+import TestList from "./components/surveytest/TestList";
+import UmfrageTest from "./components/umfrage/UmfrageTest";
 
 function App(props) {
   const [isAuth, setIsAuth] = useState(false);
@@ -24,33 +28,23 @@ function App(props) {
   return (
     <div>
       <Router>
-        
-                 
-            {isAuth?<Navbar2 setOutApp={setIsAuth}/>:<Navbar />}
-            
-         
-        
-        
+        {isAuth ? <Navbar2 setOutApp={setIsAuth} /> : <Navbar />}
+
         <Switch>
           <Route exact path="/">
-           {isAuth? <Redirect to ="/userpage" />:<Main />}
+            {isAuth ? <Redirect to="/userpage" /> : <Main />}
           </Route>
-          
-
 
           <Route exact path="/home">
             <Home />
           </Route>
 
-          <Route exact path="/umfrage">            
-            {isAuth?<Umfrage />:<Main />}
-            
+          <Route exact path="/umfrage">
+            {isAuth ? <Umfrage /> : <Main />}
           </Route>
-          
+
           <Route exact path="/auswertung">
-            {isAuth?<Auswertung />:<Main />}
-            
-            
+            {isAuth ? <Auswertung /> : <Main />}
           </Route>
 
           {/* <Route exact path="/danke">
@@ -62,19 +56,18 @@ function App(props) {
           </Route>
 
           <Route exact path="/userpage">
-            {isAuth?<UserPage/>:<Main />}
-            
+            {isAuth ? <UserPage /> : <Main />}
           </Route>
 
-          {isAuth?
-          <Route exact path="/userpage">
-          <UserPage />
-          </Route>
-          :
-          <Route exact path="/">
-          <Main />
-          </Route>
-        }
+          {isAuth ? (
+            <Route exact path="/userpage">
+              <UserPage />
+            </Route>
+          ) : (
+            <Route exact path="/">
+              <Main />
+            </Route>
+          )}
 
           <Route exact path="/login">
             <Login setOutApp={setIsAuth} />
@@ -84,10 +77,10 @@ function App(props) {
             <Signup setOutApp={setIsAuth} />
           </Route>
 
-          <Route exact path={"/antwort/:id"} >
+          <Route exact path={"/antwort/:id"}>
             <SurveyTest />
-            </Route>                         
-            <Route path="/testlist">
+          </Route>
+          <Route path="/testlist">
             <TestList />
           </Route>
 
@@ -98,9 +91,6 @@ function App(props) {
           <Route path="*">
             <NotFound />
           </Route>
-          
-          
-
         </Switch>
         <Footer />
       </Router>
