@@ -22,7 +22,9 @@ const Navbar = () => {
             <li>Main</li>
         </Link>
 
-        
+        <Link to="/hilfeseite" className="hilfe">
+            <li>Hilfe</li>
+        </Link>
         
         <Link to="/login" className="login">
             <li>Login</li>

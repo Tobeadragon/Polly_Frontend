@@ -3,7 +3,7 @@ import GoogleLogin from "react-google-login";
 import Modal from "react-modal";
 import { withRouter } from "react-router-dom";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
-import {backend, googleid} from '../config';
+// import {backend, googleid} from '../config';
 import "./Modal.css";
 import axios from "axios";
 
@@ -37,7 +37,7 @@ const Login = (props) => {
       };
       console.log(payload);
       axios
-        .post(`${backend}/user/login`, payload)
+        .post(`${process.env.REACT_APP_BACKENDURL}/user/login`, payload)
         .then((response) => {
           console.log(response);
           localStorage.setItem("user_token", response.data.token);
@@ -113,7 +113,7 @@ const Login = (props) => {
     // console.log("test",response);
     axios({
       method: "POST",
-      url: `${backend}/user/googlelogin`,
+      url: `${process.env.REACT_APP_BACKENDURL}/user/googlelogin`,
       data: { tokenId: response.tokenId },
     }).then((response) => {
       // console.log(response);
@@ -186,7 +186,7 @@ const Login = (props) => {
         <div className="G_login">
           {/* <Button onClick={()=>sendToGoogle()}>Google</Button> */}
           <GoogleLogin
-            clientId={googleid}
+            clientId={process.env.REACT_APP_GOOGLECLIENTID}
             buttonText="Login mit Google"
             onSuccess={responseSuccessGoogle}
             onFailure={responseFailureGoogle}

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import Danke from '../danke/Danke'
 import {withRouter} from 'react-router-dom'
 import axios from "axios";
-import {backend} from '../../config';
+// import {backend} from '../../config';
 import {
   Button,
   Form,
@@ -70,7 +70,7 @@ const Umfrage = (props) => {
       authorization: `Bearer ${token}`,
     };
 
-    axios.post(`${backend}/frage`, frage, {headers:headers}).then((res) => {
+    axios.post(`${process.env.REACT_APP_BACKENDURL}/frage`, frage, {headers:headers}).then((res) => {
       console.log(res);
       console.log(res.data);
       setUmfrageIds(res.data.ufrageID)
