@@ -2,7 +2,7 @@
 import React, {  useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import { Button } from "reactstrap";
-
+import QRCode from "qrcode.react"
 // import Umfrage from '../umfrage/Umfrage'
 
 const Danke =(props)=> {
@@ -46,6 +46,18 @@ const Danke =(props)=> {
         }}>
         Copy the link
       </Button>   
+      <br/>
+      <h4>You can also send below QR code</h4>
+      <QRCode value={linkinfo} id="qrcode" />
+      <Button color="danger" onClick={(e)=> 
+        {        
+        const copyText = document.querySelector("#qrcode");
+        copyText.select();
+        document.execCommand("copy");
+        }}>
+        Copy the QR Code
+      </Button>
+
       </div>
     )
   }
