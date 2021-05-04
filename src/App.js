@@ -21,6 +21,7 @@ import Home from "./components/home/Home";
 import SurveyTest from "./components/surveytest/SurveryTest";
 import TestList from "./components/surveytest/TestList";
 import UmfrageTest from "./components/umfrage/UmfrageTest";
+import Hilfeseite from "./components/hilfeseite/Hilfeseite";
 
 function App(props) {
   const [isAuth, setIsAuth] = useState(false);
@@ -86,6 +87,10 @@ function App(props) {
 
           <Route path="/umfragetest">
             <UmfrageTest />
+          </Route>
+
+          <Route path="/hilfeseite">
+            <Hilfeseite />
           </Route>
 
           <Route path="*">

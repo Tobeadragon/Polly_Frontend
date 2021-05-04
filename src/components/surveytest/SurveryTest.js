@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import { Button } from "reactstrap";
 import {withRouter} from 'react-router-dom'
 import Danke2 from '../../components/danke/Danke2'
-import {backend} from '../../config';
+// import {backend} from '../../config';
 
 const ServeryTest = (props) => {
 
@@ -24,7 +24,7 @@ const ServeryTest = (props) => {
 
     //    axios.get(`http://localhost:5000/umfrage/${id}`)
     //    axios.get(`http://localhost:5000/umfrage/"${id}"`)
-       axios.get(`${backend}/umfrage/${id}`)
+       axios.get(`${process.env.REACT_APP_BACKENDURL}/umfrage/${id}`)
     
        .then((response)=>{
 
@@ -77,7 +77,7 @@ const ServeryTest = (props) => {
        
         const surveySend =(e)=>{
 
-       axios.post(`${backend}/antwort`,payload)
+       axios.post(`${process.env.REACT_APP_BACKENDURL}/antwort`,payload)
        .then((response)=>{
            console.log(response)
        })

@@ -3,7 +3,7 @@ import axios from "axios";
 import React,{useState, useEffect} from "react";
 import "./Auswertung.css";
 import AuswertungsList from "./AuswertungsList";
-import {backend} from '../../config';
+// import {backend} from '../../config';
 
 const Auswertung = (props) => {
 
@@ -18,7 +18,7 @@ const Auswertung = (props) => {
   
  useEffect(() => {
   axios
-  .get(`${backend}/antwort/${id}`)
+  .get(`${process.env.REACT_APP_BACKENDURL}/antwort/${id}`)
   .then((response) => {
     console.log(response);
     // console.log(response.data)

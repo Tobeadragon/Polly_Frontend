@@ -3,7 +3,7 @@ import { withRouter,Link} from "react-router-dom";
 import "./UserPage.css";
 import { Button } from "reactstrap";
 import axios from "axios";
-import {backend} from '../../config'
+// import {backend} from '../../config'
 // import UserPageList from "./UserPageList";
 
 const UserPage = (props) => {
@@ -19,7 +19,7 @@ const UserPage = (props) => {
     };
 
     axios
-      .get(`${backend}/umfrage`, { headers: headers })
+      .get(`${process.env.REACT_APP_BACKENDURL}/umfrage`, { headers: headers })
       .then((response) => {
         console.log(response);
         console.log(response.data)
