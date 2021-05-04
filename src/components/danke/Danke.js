@@ -2,7 +2,7 @@
 import React, {  useEffect } from 'react'
 import {Link} from 'react-router-dom'
 import { Button } from "reactstrap";
-import { frontend} from '../../config';
+
 // import Umfrage from '../umfrage/Umfrage'
 
 const Danke =(props)=> {
@@ -16,7 +16,7 @@ const Danke =(props)=> {
   }, [])
   
   
-  const linkinfo = `${frontend}/antwort/${props.surveyId}`
+  const linkinfo = `${process.env.REACT_APP_FRONTENDURL}/antwort/${props.surveyId}`
 
      
   
