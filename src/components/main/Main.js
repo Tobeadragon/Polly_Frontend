@@ -1,6 +1,6 @@
 import React from "react";
 
-import {withRoute, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import "./Main.css";
 const Main = () => {
   return (
@@ -55,4 +55,4 @@ const Main = () => {
   );
 };
 
-export default withRoute(Main);
+export default Main;
