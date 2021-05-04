@@ -29,7 +29,7 @@ const Main = () => {
                 genaueren Analyse ihrer Marktdaten, haben unsere Erfahrungen
                 gezeigt, das es sich anbietet nicht mehr als 4 Antwortoptionen
                 zu geben. Weitere Best Practice Tipps zum Erstellungen ihrer
-                Umfragen finden sie auf unserer <Link to="/hilfeseite">Hilfsseite(Link zur Hilfseite)</Link>.
+                Umfragen finden sie auf unserer <Link to="/hilfeseite" style={{color:"yellow"}}>Hilfsseite(Link zur Hilfseite)</Link>.
               </p>
             </li>
             <li className="Acard c2">
