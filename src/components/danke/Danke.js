@@ -48,7 +48,7 @@ const Danke =(props)=> {
       </Button>   
       <br/>
       <h4>You can also send below QR code</h4>
-      <QRCode value={linkinfo} />
+      <QRCode value={linkinfo} style={{marginLeft:"30px"}}/>
       
 
       </div>
