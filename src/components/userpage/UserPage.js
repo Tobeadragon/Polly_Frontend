@@ -69,7 +69,7 @@ const UserPage = (props) => {
       {umfragen.map((umf, index)=>(
         
         <Link to="/auswertung" kex={index}>
-        <li onClick={()=>saveUmfrageId(umf._id)} key={index}><h3>{umf.titel}</h3></li>
+        <li onClick={()=>saveUmfrageId(umf._id)} key={index}><h3>{umf.titel}</h3><button>Löschen</button></li>
         {/* <li  key={index}>{umf.title}</li> */}
         </Link>
       ))}
