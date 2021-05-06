@@ -24,6 +24,7 @@ const Auswertung = (props) => {
       .catch((error) => {
         console.log(error);
       });
+      // eslint-disable-next-line
   }, []);
 
   console.log(umfrageTitel);

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import GoogleLogin from "react-google-login";
 import Modal from "react-modal";
-import { withRouter } from "react-router-dom";
+import { withRouter, Link } from "react-router-dom";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
-// import {backend, googleid} from '../config';
 import "./Modal.css";
 import axios from "axios";
 
@@ -29,6 +28,7 @@ const Login = (props) => {
     }));
   };
 
+  // login mit email und password
   const sendDetailsToServer = () => {
     if (state.email.length && state.password.length) {
       const payload = {
@@ -87,32 +87,28 @@ const Login = (props) => {
     sendDetailsToServer();
   };
 
-  // const sendToGoogle = () => {
-  //   axios
-  //     .post("http://localhost:5000/auth/google")
-  //     .then((response) => {
-  //       console.log(response);
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
-
-  // const responseGoogle = (response) => {
-  //   console.log(response);
-  //   props.history.push("/userpage");
-  // };
-
   const responseSuccessGoogle = (response) => {
     axios({
       method: "POST",
       url: `${process.env.REACT_APP_BACKENDURL}/user/googlelogin`,
+      // url: `http://localhost:5000/user/googlelogin`,
       data: { tokenId: response.tokenId },
     }).then((response) => {
-      localStorage.setItem("google_id", response.tokenId);
+      console.log(response);
+      localStorage.setItem("google_id", response.data.token);
+      localStorage.setItem("user_name", response.data.name);
+
+      const userPageGoogle = localStorage.getItem("google_id");
+      console.log(userPageGoogle);
+      if (userPageGoogle) {
+        props.setOutApp(true);
+        props.history.push("./userpage");
+      } else {
+        props.history.push("/");
+      }
     });
-    props.history.push("/userpage");
   };
+
   const responseFailureGoogle = (response) => {
     console.log(response);
   };
@@ -128,9 +124,10 @@ const Login = (props) => {
         contentLabel="Selected Option"
       >
         <h1>Login</h1>
-        <a href="/">
+        <Link to="/">
           <i onClick={closeModal} className="closeBtn fas fa-times"></i>
-        </a>
+        </Link>
+
         <Form action="" className="form">
           <FormGroup className="">
             <Label htmlFor="InputEmail">E-mail</Label>

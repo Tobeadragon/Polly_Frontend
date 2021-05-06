@@ -11,6 +11,7 @@ const Navbar2 = (props) => {
    localStorage.removeItem("user_token")
    localStorage.removeItem("user_name")
    localStorage.removeItem("umfrage_id")
+   localStorage.removeItem("google_id")
    
    props.setOutApp(false);
    props.history.push("/");
