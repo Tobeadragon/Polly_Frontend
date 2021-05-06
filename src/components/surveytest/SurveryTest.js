@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { Button } from "reactstrap";
 import { withRouter } from "react-router-dom";
 import Danke2 from "../../components/danke/Danke2";
-// import {backend} from '../../config';
 
 const ServeryTest = (props) => {
   const { id } = useParams();

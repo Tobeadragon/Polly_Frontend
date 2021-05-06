@@ -60,8 +60,8 @@ const UserPage = (props) => {
         ))}
       </ul>
 
-      <Button color="danger" onClick={() => GoCreate()}>
-        Create new Survey
+      <Button color="primary" onClick={() => GoCreate()}>
+        Umfrage erstellen
       </Button>
     </div>
   );
