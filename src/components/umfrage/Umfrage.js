@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-// import Abstimmen from "../abstimmen/Abstimmen";
-import Danke from '../danke/Danke'
-import {withRouter} from 'react-router-dom'
+import Danke from "../danke/Danke";
+import { withRouter } from "react-router-dom";
 import axios from "axios";
-// import {backend} from '../../config';
 import {
   Button,
   Form,
@@ -16,7 +14,7 @@ import {
 
 const Umfrage = (props) => {
   const [display, setDisplay] = useState(false);
-  const [umfrageIds, setUmfrageIds]=useState("")
+  const [umfrageIds, setUmfrageIds] = useState("");
   const [umfrageName, setUmfrageName] = useState("");
   const [fragen, setFragen] = useState([
     {
@@ -27,8 +25,6 @@ const Umfrage = (props) => {
       // antwortD: "",
     },
   ]);
-
-  
 
   const handleClickFrage = () => {
     let aktuellefragen = [...fragen];
@@ -47,14 +43,13 @@ const Umfrage = (props) => {
   };
 
   const handleSubmit = (e) => {
-    console.log(fragen)
+    console.log(fragen);
 
     e.preventDefault();
     const neuFragen = fragen.map((item) => {
       return (item = {
         frage: item.frage,
         antworten: Object.values(item).slice(1),
-        // antworten:item?Object.values(item).slice(1):
       });
     });
     const frage = {
@@ -70,16 +65,18 @@ const Umfrage = (props) => {
       authorization: `Bearer ${token}`,
     };
 
-    axios.post(`${process.env.REACT_APP_BACKENDURL}/frage`, frage, {headers:headers}).then((res) => {
-      console.log(res);
-      console.log(res.data);
-      setUmfrageIds(res.data.ufrageID)
-            
-      
-    });
-    
-    console.log(umfrageIds)
-  
+    axios
+      .post(`${process.env.REACT_APP_BACKENDURL}/frage`, frage, {
+        headers: headers,
+      })
+      .then((res) => {
+        console.log(res);
+        console.log(res.data);
+        setUmfrageIds(res.data.ufrageID);
+      });
+
+    console.log(umfrageIds);
+
     setDisplay(true);
   };
   const handleChange = (e) => {
@@ -88,13 +85,16 @@ const Umfrage = (props) => {
     let aktuellefrageobject = fragenkopie[frageindex];
     aktuellefrageobject[e.target.name] = e.target.value;
     setFragen(fragenkopie);
-    // setFragen({ ...fragen, [e.target.name]: e.target.value });
   };
-  
+
   return (
     <div>
       {display ? (
-        <Danke umfrageName={umfrageName} fragen={fragen} surveyId={umfrageIds} />
+        <Danke
+          umfrageName={umfrageName}
+          fragen={fragen}
+          surveyId={umfrageIds}
+        />
       ) : (
         <div className="container border p-5 my-5 rounded border-dark">
           <h1 className="bg-dark text-light p-2 text-center">Neue Umfrage</h1>

@@ -41,8 +41,7 @@ const Login = (props) => {
         .then((response) => {
           console.log(response);
           localStorage.setItem("user_token", response.data.token);
-          localStorage.setItem("user_name",response.data.name)
-          
+          localStorage.setItem("user_name", response.data.name);
 
           if (response.status === 200) {
             setState((prevState) => ({
@@ -68,8 +67,6 @@ const Login = (props) => {
     }
   };
 
-
-
   const redirectToUser = () => {
     const userPage = localStorage.getItem("user_token");
     console.log(userPage);
@@ -86,11 +83,8 @@ const Login = (props) => {
 
   const handleSubmitClick = (e) => {
     e.preventDefault();
-    // if(state.password === state.confirmPassword) {
+
     sendDetailsToServer();
-    // }else{
-    //   alert("Passwords do not match");
-    // }
   };
 
   // const sendToGoogle = () => {
@@ -110,20 +104,17 @@ const Login = (props) => {
   // };
 
   const responseSuccessGoogle = (response) => {
-    // console.log("test",response);
     axios({
       method: "POST",
       url: `${process.env.REACT_APP_BACKENDURL}/user/googlelogin`,
       data: { tokenId: response.tokenId },
     }).then((response) => {
-      // console.log(response);
-      localStorage.setItem("google_id",response.tokenId)
+      localStorage.setItem("google_id", response.tokenId);
     });
     props.history.push("/userpage");
   };
   const responseFailureGoogle = (response) => {
     console.log(response);
-    // props.history.push("")
   };
 
   return (
@@ -133,10 +124,8 @@ const Login = (props) => {
         onRequestClose={closeModal}
         className="Modal"
         overlayClassName="Overlay"
-        // onRequestClose={props.clearSelectedOption}
         ariaHideApp={false}
         contentLabel="Selected Option"
-        // contentLabel="Example Modal"
       >
         <h1>Login</h1>
         <a href="/">
@@ -165,26 +154,14 @@ const Login = (props) => {
               onChange={handleChange}
             />
           </FormGroup>
-          {/* <FormGroup className="">
-           <Label htmlFor="ConfirmPassword">Confirm Password</Label>
-           <Input type="password"
-           className=""
-           id="confirmPassword"
-           placeholder="Confirm your Password"
-           value= {state.confirmPassword}
-           onChange={handleChange}
-           
-           />
 
-         </FormGroup> */}
           <Button color="danger" onClick={handleSubmitClick}>
             Login
           </Button>
         </Form>
-        {/* <div className="" style={{display:state.successMessage? "block":"none"}} role="alert"> */}
+
         <div className="">{state.successMessage}</div>
         <div className="G_login">
-          {/* <Button onClick={()=>sendToGoogle()}>Google</Button> */}
           <GoogleLogin
             clientId={process.env.REACT_APP_GOOGLECLIENTID}
             buttonText="Login mit Google"
