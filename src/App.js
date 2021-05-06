@@ -10,17 +10,13 @@ import Umfrage from "./components/umfrage/Umfrage";
 import Navbar from "./components/nav/Navbar";
 import Navbar2 from "./components/nav/Navbar2";
 import Main from "./components/main/Main";
-// import Danke from "./components/danke/Danke";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
 import Footer from "./components/footer/Footer";
 import UserPage from "./components/userpage/UserPage";
 import NotFound from "./components/NotFound";
 import Auswertung from "./components/auswertung/Auswertung";
-import Home from "./components/home/Home";
 import SurveyTest from "./components/surveytest/SurveryTest";
-import TestList from "./components/surveytest/TestList";
-import UmfrageTest from "./components/umfrage/UmfrageTest";
 import Hilfeseite from "./components/hilfeseite/Hilfeseite";
 
 function App(props) {
@@ -36,10 +32,6 @@ function App(props) {
             {isAuth ? <Redirect to="/userpage" /> : <Main />}
           </Route>
 
-          <Route exact path="/home">
-            <Home />
-          </Route>
-
           <Route exact path="/umfrage">
             {isAuth ? <Umfrage /> : <Main />}
           </Route>
@@ -47,10 +39,6 @@ function App(props) {
           <Route exact path="/auswertung">
             {isAuth ? <Auswertung /> : <Main />}
           </Route>
-
-          {/* <Route exact path="/danke">
-            <Danke />
-          </Route> */}
 
           <Route exact path="/surveytest">
             <SurveyTest />
@@ -80,13 +68,6 @@ function App(props) {
 
           <Route exact path={"/antwort/:id"}>
             <SurveyTest />
-          </Route>
-          <Route path="/testlist">
-            <TestList />
-          </Route>
-
-          <Route path="/umfragetest">
-            <UmfrageTest />
           </Route>
 
           <Route path="/hilfeseite">

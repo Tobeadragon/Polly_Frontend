@@ -1,128 +1,121 @@
-import axios from 'axios'
-import React, {useState, useEffect} from 'react'
-import { useParams } from 'react-router-dom'
+import axios from "axios";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import { Button } from "reactstrap";
-import {withRouter} from 'react-router-dom'
-import Danke2 from '../../components/danke/Danke2'
+import { withRouter } from "react-router-dom";
+import Danke2 from "../../components/danke/Danke2";
 // import {backend} from '../../config';
 
 const ServeryTest = (props) => {
+  const { id } = useParams();
 
-    const {id} =  useParams()  
+  const [antwortOption, setAntwortOption] = useState([]);
+  const [antwortListe, setAntwortListe] = useState([]);
+  const [display, setDisplay] = useState(false);
+  const [umfrageTitel, setUmfrageTitel] = useState();
+
+    useEffect(() => {
     
+    axios
+      .get(`${process.env.REACT_APP_BACKENDURL}/umfrage/${id}`)
 
-    const [antwortOption, setAntwortOption] = useState([])
-    const [arrays,setArrays] = useState([])
-    const [display,setDisplay]=useState(false)
-    
-    // const [ausgewaehlt, setAusgewaehlt] = useState([])
-
-       useEffect(() => {
-          
-         
-       
-
-    //    axios.get(`http://localhost:5000/umfrage/${id}`)
-    //    axios.get(`http://localhost:5000/umfrage/"${id}"`)
-       axios.get(`${process.env.REACT_APP_BACKENDURL}/umfrage/${id}`)
-    
-       .then((response)=>{
-
+      .then((response) => {
         console.log(response);
-        console.log(response.data)
-        console.log(response.data.antworten)
-        setAntwortOption(response.data)
-        // console.log(response.data[0].antworten)
+        console.log(response.data);
+        setAntwortOption(response.data);
+        setUmfrageTitel(response.data[0].titel);
         
-           
-       })
-       .catch((error)=>{
-           console.log(error);
-       })
-    
-// eslint-disable-next-line
-    }, [])
-    //    console.log(antwortOption)
+      })
+      .catch((error) => {
+        console.log(error);
+      });
 
-    
-    
-    
-    
-    const arr =[]
-    const antwortObjekt =(antwort,frageID)=>{
-      
-    //   setArrays((arrys)=>arrays.push({frageID,antwort}))
-        // arrays.push({frageID,antwort})
-        arr.push({frageID,antwort})
-        const arr2 = arr.slice(-1)
-      
-        setArrays(arr2)
-    } 
-    console.log(arrays)
-    
-    // arrays = arrays.slice(-1)[0]
-    const payload={antworten:arrays}
-    console.log(payload)
-    
+    // eslint-disable-next-line
+  }, []);
+  
 
-    // const payload={antworten:arr1}
-    //   console.log(payload)
+  const addAntwortToListe = (antwortArgument, frageIDArgument) => {
+    const aktuelleAntworten = [...antwortListe];
+    const neueAktuelleAntworten = aktuelleAntworten.filter((objekt)=>objekt.frageID !== frageIDArgument)
+    neueAktuelleAntworten.push({ frageID: frageIDArgument, antwort: antwortArgument });
+        
+    setAntwortListe(neueAktuelleAntworten);
+  };
 
-    //    const payload ={
-    //     "antworten":[
-    //        {"frageID": "6083cec026d9b59b5a1615b3","antwort" : "Zu Fuß" },
-    //        {"frageID": "6083cec026d9b59b5a1615b4","antwort":"Japanisch"},
-    //        ]
-    //     }
-       
-        const surveySend =(e)=>{
+  const payload = { antworten: antwortListe };
+  
 
-       axios.post(`${process.env.REACT_APP_BACKENDURL}/antwort`,payload)
-       .then((response)=>{
-           console.log(response)
-       })
-       .catch((error)=>{
-           console.log(error)
-       })
+  //    Payload Daten muss wie unten sein.
+  
+    //  const payload ={
+    //   "antworten":[
+    //      {"frageID": "6083cec026d9b59b5a1615b3","antwort" : "Zu Fuß" },
+    //      {"frageID": "6083cec026d9b59b5a1615b4","antwort":"Japanisch"},
+    //      ]
+    //   }
 
-       setDisplay(true);
-       
-    }
-    
-    
+  const surveySend = (e) => {
+    axios
+      .post(`${process.env.REACT_APP_BACKENDURL}/antwort`, payload)
+      .then((response) => {
+        console.log(response);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
 
-     return (
-        <div style={{margin:"100px"}}>
-        {display?(< Danke2 />):(   
-             
-        <ul style={{listStyleType:"none"}}>
-            <h2>Survey request from </h2>
-            <h2>Please select your answer</h2>
-        <form action="" onSubmit={surveySend}>
-        {antwortOption.map((frg, indexfrage)=>{
-            return <li style={{fontSize:"20px"}} key={indexfrage}>{frg.frage} {frg.antworten.map((antwort, indexantwort)=>{
-            
-            return <div  key={indexantwort}>
-                
-                    <p style={{display:"none"}}>{frg._id}</p>
-                {/* <label >{ant}</label> */}
-                <input id={frg._id} type="radio" name={indexfrage} value={antwort} onChange={()=>antwortObjekt(antwort,frg._id)}/>{antwort}
-                
-                
-                </div>})} </li>
-               
-            
-        })} 
-        <br/>
-        <Button color="danger">
-        Send your answer
-      </Button>
-        </form>
+    setDisplay(true);
+  };
+
+  return (
+    <div style={{ margin: "100px" }}>
+      {display ? (
+        <Danke2 />
+      ) : (
+        <ul style={{ listStyleType: "none" }}>
+          <h3 style={{ fontWeight: "bold" }}>{umfrageTitel}</h3>
+          <h3>Please select your answer</h3>
+          <form action="" onSubmit={surveySend}>
+            {antwortOption.map((frg, indexfrage) => {
+              return (
+                <li key={indexfrage}>
+                  <p
+                    style={{
+                      fontSize: "20px",
+                      margin: "0",
+                      marginTop: "20px",
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {frg.frage}{" "}
+                  </p>
+                  {frg.antworten.map((antwort, indexantwort) => {
+                    return (
+                      <div key={indexantwort}>
+                        <p style={{ display: "none" }}>{frg._id}</p>
+                        {/* <label >{ant}</label> */}
+                        <input
+                          id={frg._id}
+                          type="radio"
+                          name={indexfrage}
+                          value={antwort}
+                          onChange={() => addAntwortToListe(antwort, frg._id)}
+                          key={indexantwort}
+                        />
+                        {antwort}
+                      </div>
+                    );
+                  })}
+                </li>
+              );
+            })}
+            <br />
+            <Button color="danger">Send your answer</Button>
+          </form>
         </ul>
-        
-        )}
-        </div>
-    )
-}
+      )}
+    </div>
+  );
+};
 
-export default withRouter(ServeryTest)
+export default withRouter(ServeryTest);

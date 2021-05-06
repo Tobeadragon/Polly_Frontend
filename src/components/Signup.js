@@ -3,8 +3,6 @@ import Modal from "react-modal";
 import { withRouter } from "react-router-dom";
 import GoogleLogin from "react-google-login";
 import { Button, Form, FormGroup, Label, Input } from "reactstrap";
-// import {backend, googleid} from '../config';
-import "./Modal.css";
 import axios from "axios";
 
 const Signup = (props) => {
@@ -95,14 +93,11 @@ const Signup = (props) => {
       method: "POST",
       url: `${process.env.REACT_APP_BACKENDURL}/user/googlelogin`,
       data: { tokenId: response.tokenId },
-    }).then((response) => {
-      // console.log(response);
-    });
+    }).then((response) => {});
     props.history.push("/userpage");
   };
   const responseFailureGoogle = (response) => {
     console.log(response);
-    // props.history.push("")
   };
 
   return (

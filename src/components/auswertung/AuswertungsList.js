@@ -3,29 +3,19 @@ import "./Auswertung.css";
 import { PieChart, Pie, Tooltip, Cell } from "recharts";
 import "./AuswertungsList.css";
 
-
 const AuswertungsList = (props) => {
+  const antworten = props.ant;
+  console.log(props.ant);
 
-  // console.log(props.ant)
- 
-  const antworten = props.ant
-  console.log(props.ant)
-  // const antworten = ["gut", "schrecht"]
-  
-  const questions = props.que
-  console.log(props.que)
-  // const questions = "Was?"
-  
-  
+  const questions = props.que;
+  console.log(props.que);
+
   let count = {};
   antworten.forEach((i) => {
     count[i] = (count[i] || 0) + 1;
   });
 
-  // console.log(count);
-  
   let dataNumber = Number(Object.keys(count).length);
-  // console.log(dataNumber);
 
   let auswahl1 = Object.keys(count)[0];
   let result1 = Number(Object.values(count)[0]);
@@ -35,12 +25,9 @@ const AuswertungsList = (props) => {
 
   let auswahl3 = Object.keys(count)[2];
   let result3 = Number(Object.values(count)[2]);
-  
 
   let auswahl4 = Object.keys(count)[3];
   let result4 = Number(Object.values(count)[3]);
-
-  
 
   const data0 = [
     { index: 0, name: auswahl1, value: result1 },
@@ -49,21 +36,16 @@ const AuswertungsList = (props) => {
     { index: 3, name: auswahl4, value: result4 },
   ];
 
-  // console.log(data0);
-
   let data = data0.slice(0, dataNumber);
-  // console.log(data);
 
   const auswahl0 = [
-    auswahl1, result1, auswahl2, result2, auswahl3, result3, auswahl4, result4
-  ]
+    [auswahl1, result1],
+    [auswahl2, result2],
+    [auswahl3, result3],
+    [auswahl4, result4],
+  ];
 
-  let auswahl = auswahl0.slice(0,dataNumber*2)
-  // console.log(auswahl)
-
-  
-  
-  
+  let auswahl = auswahl0.slice(0, dataNumber);
 
   const totalvoter = antworten.length;
 
@@ -97,25 +79,20 @@ const AuswertungsList = (props) => {
     );
   };
 
-  //
-
   return (
     <div className="">
-     
       <h3>{questions}</h3>
       <div className="AuswertungsContainer">
         <div>
-        <h4>Total voter für diese Frage {totalvoter}</h4>   
-      <ul className="liststyle">
-        
-      {auswahl.map((answer, i)=><li key={i}>{answer}</li>)}
-      
-        
-        
-
-        
-        </ul>
-        </div> 
+          <h4>Total voter für diese Frage {totalvoter}</h4>
+          <ul className="liststyle">
+            {auswahl.map((answer, i) => (
+              <li key={i}>
+                {answer[0]}:{answer[1]}
+              </li>
+            ))}
+          </ul>
+        </div>
 
         <div className="PieChart">
           <PieChart width={250} height={250}>

@@ -1,6 +1,6 @@
 import React from "react";
 
-import {Link} from 'react-router-dom';
+import { Link } from "react-router-dom";
 import "./Main.css";
 const Main = () => {
   return (
@@ -29,20 +29,31 @@ const Main = () => {
                 genaueren Analyse ihrer Marktdaten, haben unsere Erfahrungen
                 gezeigt, das es sich anbietet nicht mehr als 4 Antwortoptionen
                 zu geben. Weitere Best Practice Tipps zum Erstellungen ihrer
-                Umfragen finden sie auf unserer <Link to="/hilfeseite" style={{color:"yellow"}}>Hilfsseite(Link zur Hilfseite)</Link>.
+                Umfragen finden sie auf unserer{" "}
+                <Link to="/hilfeseite" style={{ color: "yellow" }}>
+                  Hilfsseite(Link zur Hilfseite)
+                </Link>
+                .
               </p>
             </li>
             <li className="Acard c2">
               <h3>Teilen</h3>
               <p>
-              Nach dem Erstellen iher Umfrage erhalten Sie von uns ihren persönlichen Link, sowie einen QR Code, welchen Sie mit ihren Kunden teilen können. Damit bleibt die Umfrage für Ihre Kunden anonym. Unsere Erfahrungen haben gezeigt, das es Ihren Kunden so leichter fällt, offenes und ehrliches Feedback zu geben.
-
+                Nach dem Erstellen iher Umfrage erhalten Sie von uns ihren
+                persönlichen Link, sowie einen QR Code, welchen Sie mit ihren
+                Kunden teilen können. Damit bleibt die Umfrage für Ihre Kunden
+                anonym. Unsere Erfahrungen haben gezeigt, das es Ihren Kunden so
+                leichter fällt, offenes und ehrliches Feedback zu geben.
               </p>
             </li>
             <li className="Acard c3">
               <h3>Ergebnisse erhalten</h3>
               <p>
-              Mit Polly halten sie die Zufriedenheit Ihrer Kunden im Auge. Auf der Auswertungsseite ihrer Umfrage halten sie stets die aktuelle Teilnehmerzahl ihrer Umfrage im Blick. Die Verteilung der gewählten Antworten können sie immer aktuell und auf einen Blick auf unseren Antwortcharts nachvollziehen.
+                Mit Polly halten sie die Zufriedenheit Ihrer Kunden im Auge. Auf
+                der Auswertungsseite ihrer Umfrage halten sie stets die aktuelle
+                Teilnehmerzahl ihrer Umfrage im Blick. Die Verteilung der
+                gewählten Antworten können sie immer aktuell und auf einen Blick
+                auf unseren Antwortcharts nachvollziehen.
               </p>
             </li>
           </ul>
