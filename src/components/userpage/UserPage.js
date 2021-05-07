@@ -43,14 +43,14 @@ const UserPage = (props) => {
 
   return (
     <div className="UserPage">
-      <h1>Welcome to {name} page</h1>
+      <h1>Welcome to {name}'s page</h1>
       {umfragen.length > 0 ? (
         <h2>click the survey below to see the result</h2>
       ) : (
         <h2>Please create your survey</h2>
       )}
 
-      <ul style={{ listStyleType: "none" }}>
+      <ul style={{ listStyleType: "none", color:"black" }}>
         {umfragen.map((umf, index) => (
           <Link to="/auswertung" kex={index}>
             <li onClick={() => saveUmfrageId(umf._id)} key={index}>
