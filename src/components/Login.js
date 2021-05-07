@@ -98,7 +98,7 @@ const Login = (props) => {
       console.log(response);
       localStorage.setItem("google_id", response.data.token);
       localStorage.setItem("user_name", response.data.name);
-
+      localStorage.setItem("umfrage_id",response.data.token);
       const userPageGoogle = localStorage.getItem("google_id");
       console.log(userPageGoogle);
       if (userPageGoogle) {
