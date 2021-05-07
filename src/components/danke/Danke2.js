@@ -2,12 +2,13 @@ import React from "react";
 
 const Danke2 = () => {
   return (
-    <div styles={{ margin: "100px" }}>
-      <h1>Thank you for your answer</h1>
-      <h2>
-        If you would like to create your own Survey, Please Sign up form above
-        menu and create your own
-      </h2>
+    <div>
+      <main className="Danke">
+      <div className="Danke2Titel">Vielen Dank für Ihre Teilnahme.</div>
+      <p className="Danke2Text">
+      Möchten Sie ihre eigene Umfrage erstellen? Dann registrieren Sie sich bei uns und schon kann es losgehen.
+      </p>
+      </main>
     </div>
   );
 };

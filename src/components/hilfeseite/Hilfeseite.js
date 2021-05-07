@@ -2,8 +2,10 @@ import React from "react";
 import "./Hilfeseite.css";
 const Hilfeseite = () => {
   return (
-    <div style={{ margin: "100px" }}>
-      <h1 className="title">Hilfeseite</h1>
+    <div >
+      <main className="HilfeSeite">
+      <header className="header">Hilfeseite</header>
+      <div className="HilfeArtikel">
       <div>
         <h2 className="subtitle">Tipps erstellen:</h2>
         <div>
@@ -73,6 +75,8 @@ const Hilfeseite = () => {
           </p>
         </div>
       </div>
+      </div>
+      </main>
     </div>
   );
 };

@@ -5,10 +5,69 @@
 }
 
 .UserPage{
-    margin-top: 100px;
-    margin-left: 20px;
-    padding: 5px;
-    /* border: 1px solid black; */
+    height: 100vh;
+    margin-top:75px;
+    
     
 }
+
+.UmfrageList{
+    margin-left: 20px;
+    list-style: none;
+    
+}
+
+.UserUmfrageList{
+    color: black;
+    
+}
+.UserUmfrageList:hover{
+    color: blue;
+    text-decoration: none;
+}
+
+.UserHeader{
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 20px auto;
+    background-color: red;
+    width: 100%;
+    color: white;
+    padding: 10px;
+    text-shadow: 2px 2px 2px black;
+}
+
+.SubHeader{
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    
+    
+}
+
+.UserButton{
+    margin: 20px;
+}
+
+
+@media screen and (max-width:780px) {
+    .UserHeader{
+       font-size: 1.2rem; 
+    }
+
+     .SubHeader{
+         
+        margin-left: 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+    }
+
+    
+}
+
+
+
+
 

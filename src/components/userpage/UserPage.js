@@ -42,27 +42,36 @@ const UserPage = (props) => {
   };
 
   return (
-    <div className="UserPage">
-      <h1>Welcome to {name}'s page</h1>
-      {umfragen.length > 0 ? (
-        <h2>click the survey below to see the result</h2>
-      ) : (
-        <h2>Please create your survey</h2>
-      )}
+    <div>
+      <main className="UserPage">
+        <header className="UserHeader">Welcome to {name}'s page</header>
+        <div className="SubHeader">
+          {umfragen.length > 0 ? (
+            <p>Klicken Sie auf die Umfrage, um sich die Ergebnisse anzeigen zu lassen.</p>
+          ) : (
+            <p>Erstellen Sie ihre Umfrage</p>
+          )}
+        </div>
 
-      <ul style={{ listStyleType: "none", color:"black" }}>
-        {umfragen.map((umf, index) => (
-          <Link to="/auswertung" kex={index}>
-            <li onClick={() => saveUmfrageId(umf._id)} key={index}>
-              <h5>{umf.titel}</h5>
-            </li>
-          </Link>
-        ))}
-      </ul>
-
-      <Button color="primary" onClick={() => GoCreate()}>
-        Umfrage erstellen
-      </Button>
+        <div>
+          <ul className="UmfrageList">
+            {umfragen.map((umf, index) => (
+              <Link to="/auswertung" kex={index} className="UserUmfrageList">
+                <li onClick={() => saveUmfrageId(umf._id)} key={index}>
+                  <h5>{umf.titel}</h5>
+                </li>
+              </Link>
+            ))}
+          </ul>
+        </div>
+        <Button
+          color="primary"
+          onClick={() => GoCreate()}
+          style={{marginLeft:"20px"}}
+        >
+          Umfrage erstellen
+        </Button>
+      </main>
     </div>
   );
 };
