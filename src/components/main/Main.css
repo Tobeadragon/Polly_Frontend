@@ -10,16 +10,17 @@
     margin-top: 75px;
 }
 
-.header{
+.MainHeader{
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
-    margin: 20px auto;
-    background-color: red;
     width: 100%;
+    background-color: red;
+    
     color: white;
     padding: 10px;
     text-shadow: 2px 2px 2px black;
+    
 }
 
 .Ueberuns{
@@ -72,9 +73,15 @@
     padding: 15px;
 }
 
+.MainArtikelTitel{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 @media screen and (max-width:780px){
 
-.header{
+
+.MainHeader{
    font-size: 1.2rem;   
    font-weight: bold;    
 }
@@ -86,10 +93,13 @@
 }
 .Acard{
     margin-top: 10px;
+    width: 350px;
 }
 
 .Ueberuns {
-    width: 250px;
+    width: 350px;
+   
 }
+
 
 }

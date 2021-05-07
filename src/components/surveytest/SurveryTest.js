@@ -4,6 +4,7 @@ import { useParams } from "react-router-dom";
 import { Button } from "reactstrap";
 import { withRouter } from "react-router-dom";
 import Danke2 from "../../components/danke/Danke2";
+import "./SurveyTest.css"
 
 const ServeryTest = (props) => {
   const { id } = useParams();
@@ -67,10 +68,11 @@ const ServeryTest = (props) => {
   };
 
   return (
-    <div style={{ margin: "100px" }}>
+    <div>
       {display ? (
         <Danke2 />
       ) : (
+        <main className="SurveyTest">
         <ul style={{ listStyleType: "none" }}>
           <h3 style={{ fontWeight: "bold" }}>{umfrageTitel}</h3>
           <h3>Please select your answer</h3>
@@ -112,7 +114,9 @@ const ServeryTest = (props) => {
             <Button color="danger">Send your answer</Button>
           </form>
         </ul>
+        </main>
       )}
+      
     </div>
   );
 };

@@ -4,32 +4,14 @@
     box-sizing: border-box;
 }
 
-.HilfeSeite{
+.Danke{
     height: 100vh;
     margin-top:75px;
 }
 
-.HilfeArtikel{
-    margin-left: 20px;
-    width: 90%;
-}
-
-.title{
-    font-weight: bold;
-}
-
-.subtitle{
-    font-weight: bold;
-}
-
-.emphasise{
-    color: blue;
-    font-weight: bold;
-}
-
-.header{
+.DankeHeader{
     text-align: center;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     margin: 20px auto;
     background-color: red;
@@ -39,10 +21,25 @@
     text-shadow: 2px 2px 2px black;
 }
 
+.Danke2Titel{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+.Danke2Text{
+    font-size: 1.5rem;
+}
+
 @media screen and (max-width:780px) {
-   .header{
-       font-size: 1.2rem;
-   }
-   
+.DankeHeader{
+    font-size: 1.2rem;
+}
+
+.Danke2Titel{
+    font-size: 1.5rem;
+}
+.Danke2Text{
+    font-size: 1.2rem;
+}
+
 
 }

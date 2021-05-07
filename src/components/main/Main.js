@@ -6,12 +6,12 @@ const Main = () => {
   return (
     <div>
       <main className="Main">
-        <header className="header">
+        <header className="MainHeader">
           Ihre Umfrage Erstellungs Service Polly
         </header>
         <div className="Ueberuns">
-          <h3>Unsere Arten von Umfragen</h3>
-          <p>
+          <div className="MainArtikelTitel">Unsere Arten von Umfragen</div>
+          <p className="MainArtikel">
             Nur mit Feedback können Sie sich weiterentwickeln! Darum sind wir
             für Sie da! Mit der Unterstützung von Polly dem UmfrageService,
             können sie im Handumdrehen ihre individuellen Umfragen erstellen.{" "}
@@ -20,7 +20,7 @@ const Main = () => {
         <div className="">
           <ul className="Anleitung">
             <li className="Acard c1">
-              <h3>Erstellen</h3>
+              <div className="MainArtikelTitel">Erstellen</div>
               <p>
                 Unter ihrem persönlichen Nutzer Account können Sie beliebig
                 viele Umfragen anlegen. Dabei entscheiden Sie, wieviele Fragen
@@ -37,7 +37,7 @@ const Main = () => {
               </p>
             </li>
             <li className="Acard c2">
-              <h3>Teilen</h3>
+              <div className="MainArtikelTitel">Teilen</div>
               <p>
                 Nach dem Erstellen iher Umfrage erhalten Sie von uns ihren
                 persönlichen Link, sowie einen QR Code, welchen Sie mit ihren
@@ -47,7 +47,7 @@ const Main = () => {
               </p>
             </li>
             <li className="Acard c3">
-              <h3>Ergebnisse erhalten</h3>
+            <div className="MainArtikelTitel">Ergebnisse erhalten</div>
               <p>
                 Mit Polly halten sie die Zufriedenheit Ihrer Kunden im Auge. Auf
                 der Auswertungsseite ihrer Umfrage halten sie stets die aktuelle
@@ -58,9 +58,7 @@ const Main = () => {
             </li>
           </ul>
         </div>
-        <div className="Kontakt">
-          <form action=" "></form>
-        </div>
+        
       </main>
     </div>
   );
