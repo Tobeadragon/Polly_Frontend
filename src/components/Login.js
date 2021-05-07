@@ -11,6 +11,7 @@ const Login = (props) => {
 
   const closeModal = () => {
     setIsOpen(false);
+    props.history.push("/")
   };
 
   const [state, setState] = useState({
