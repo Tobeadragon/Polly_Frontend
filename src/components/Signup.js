@@ -11,6 +11,7 @@ const Signup = (props) => {
 
   const closeModal = () => {
     setIsOpen(false);
+    props.history.push("/");
   };
 
   const [state, setState] = useState({
@@ -83,12 +84,7 @@ const Signup = (props) => {
     }
   };
 
-  // const responseGoogle = (response) => {
-  //   console.log(response);
-  //   props.history.push("./userpage");
-  // };
-
-  const responseSuccessGoogle = (response) => {
+    const responseSuccessGoogle = (response) => {
     // console.log("test",response);
     axios({
       method: "POST",
@@ -118,7 +114,7 @@ const Signup = (props) => {
     <div>
       <Modal
         isOpen={modalIsOpen}
-        onRequestClose={props.clearSelectedOption}
+        onRequestClose={closeModal}
         ariaHideApp={false}
         contentLabel="Selected Option"
         className="Modal"
