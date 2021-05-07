@@ -23,7 +23,7 @@ const Hilfeseite = () => {
 
         <div>
           <h3 className="subtitle">
-            2. Geben sie nicht nur einseitige Antwortoptionen vorBsp.
+            2. Geben sie nicht nur einseitige Antwortoptionen vor bspw.
           </h3>
           <p>
             <span className="emphasise">
@@ -34,7 +34,7 @@ const Hilfeseite = () => {
 
         <div>
           <h3 className="subtitle">
-            3. Fragen Sie nicht zwei Dinge gleichzeitig
+            3. Fragen Sie nicht zwei Dinge gleichzeitig.
           </h3>
           <p>
             <span className="emphasise">
@@ -46,7 +46,7 @@ const Hilfeseite = () => {
 
         <div>
           <h3 className="subtitle">
-            4. Nutzen Sie nicht immer dieselben Fragestellungen
+            4. Nutzen Sie nicht immer dieselben Fragestellungen.
           </h3>
 
           <p>
@@ -64,7 +64,7 @@ const Hilfeseite = () => {
 
         <div>
           <h3 className="subtitle">
-            5. Achten Sie darauf, das ihre Umfrage nicht zu lang wird
+            5. Achten Sie darauf, das ihre Umfrage nicht zu lang wird.
           </h3>
 
           <p>

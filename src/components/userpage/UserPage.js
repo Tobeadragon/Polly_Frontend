@@ -45,9 +45,9 @@ const UserPage = (props) => {
     <div className="UserPage">
       <h1>Welcome to {name} page</h1>
       {umfragen.length > 0 ? (
-        <h2>click the survey below to see the result</h2>
+        <h2>Klicken Sie auf die Umfrage, um sich die Ergebnisse anzeigen zu lassen.</h2>
       ) : (
-        <h2>Please create your survey</h2>
+        <h2>Erstellen Sie ihre Umfrage</h2>
       )}
 
       <ul style={{ listStyleType: "none" }}>

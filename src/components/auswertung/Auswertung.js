@@ -34,7 +34,7 @@ const Auswertung = (props) => {
       {umfrageTitel.length > 0 ? (
         <h3>Your Umfrage : {umfrageTitel}</h3>
       ) : (
-        <h3>There is no Survey result yet</h3>
+        <h3>Wir haben noch keine Umfrage Auswertungen für Sie.</h3>
       )}
 
       <ul style={{ listStyleType: "none" }}>

@@ -3,10 +3,9 @@ import React from "react";
 const Danke2 = () => {
   return (
     <div styles={{ margin: "100px" }}>
-      <h1>Thank you for your answer</h1>
+      <h1>Vielen Dank für Ihre Teilnahme.</h1>
       <h2>
-        If you would like to create your own Survey, Please Sign up form above
-        menu and create your own
+        Möchten Sie ihre eigene Umfrage erstellen? Dann registrieren Sie sich bei uns und schon kann es losgehen.
       </h2>
     </div>
   );

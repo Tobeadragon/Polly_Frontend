@@ -22,12 +22,12 @@ const Danke = (props) => {
         Vielen Dank für Ihre Teilnahme an dieser Umfrage!
       </h1>
 
-      <h4>Please click and check your Survey</h4>
+      <h4>Klicken Sie auf eine Umfrage um sich die Ergebnisse anzeigen zu lassen.</h4>
       <Link to={`/antwort/${props.surveyId}`} target="_blank">
         <span style={{ display: "block" }}>{linkinfo}</span>
       </Link>
       <br />
-      <h4>Please send below link to your customer</h4>
+      <h4>Zur Umfrageteilnahme senden Sie bitte den Link unten an ihre Kunden.</h4>
       <input
         id="copy"
         type="text"
@@ -42,10 +42,10 @@ const Danke = (props) => {
           document.execCommand("copy");
         }}
       >
-        Copy the link
+        Link kopieren
       </Button>
       <br />
-      <h4>You can also send below QR code</h4>
+      <h4>Sie können auch den QR Code unten an ihre Kunden weiterleiten.</h4>
       <QRCode value={linkinfo} style={{ marginLeft: "30px" }} />
     </div>
   );
