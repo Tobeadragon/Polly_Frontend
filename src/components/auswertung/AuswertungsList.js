@@ -80,22 +80,25 @@ const AuswertungsList = (props) => {
   };
 
   return (
-    <div className="">
-      <h3>{questions}</h3>
+    <div>
+      <main>
+        <hr />
+      <div className="FrageTitel">{questions}</div>
       <div className="AuswertungsContainer">
         <div>
-          <h4>Total voter für diese Frage {totalvoter}</h4>
+                  <div className="AuswertungsTotalZahl">Total voter für diese Frage {totalvoter}</div>
           <ul className="liststyle">
             {auswahl.map((answer, i) => (
               <li key={i}>
-                {answer[0]}:{answer[1]}
+                <span className="AuswertungsAuswahl">Auswahl: {answer[0]} / AntwortZahl: {answer[1]}</span>
               </li>
             ))}
           </ul>
         </div>
 
         <div className="PieChart">
-          <PieChart width={250} height={250}>
+          
+          <PieChart width={300} height={300}>
             <Pie
               isAnimationActive={false}
               data={data}
@@ -103,7 +106,7 @@ const AuswertungsList = (props) => {
               cy="50%"
               labelLine={false}
               label={renderCustomizedLabel}
-              outerRadius={80}
+              outerRadius={120}
               fill="#8884d8"
               dataKey="value"
               startAngle={90}
@@ -118,8 +121,10 @@ const AuswertungsList = (props) => {
             </Pie>
             <Tooltip />
           </PieChart>
+          </div>
         </div>
-      </div>
+      
+      </main>
     </div>
   );
 };

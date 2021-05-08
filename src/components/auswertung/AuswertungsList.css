@@ -7,29 +7,61 @@
 .AuswertungsContainer{
     list-style: none;
     padding: 10px;
-    /* border: 1px solid blue; */
-    margin: 10px;
+    margin: auto 0;
     display: flex;
-    justify-content: stretch;
+    justify-content: space-evenly;
     flex-direction: row;
+    background-color: white;
+    margin: 10px;
+    border: 1px solid blue;
+    border-radius: 30px;
+    
+    
+}
+
+.AuswertungsTotalZahl{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: blue;
 }
 
 .liststyle{
     list-style: none;
 }
 
+.FrageTitel{
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.AuswertungsAuswahl{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+.AuswertungsZahl{
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
 .PieChart{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin-left: 15px;
-    width: 250px;
-    background-color: burlywood;
+    background-color: white;
+    
 }
 
 @media screen and (max-width:780px){
    .AuswertungsContainer{
        flex-direction: column;
+       align-items: center;
    }
 
 
+   .FrageTitel{
+       font-size: 1.2rem;
+       text-align: center;
+       
+   }
 
 }
