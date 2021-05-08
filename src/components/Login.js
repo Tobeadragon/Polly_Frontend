@@ -153,7 +153,7 @@ const Login = (props) => {
             />
           </FormGroup>
 
-          <Button color="danger" onClick={handleSubmitClick}>
+          <Button color="primary" onClick={handleSubmitClick}>
             Login
           </Button>
         </Form>

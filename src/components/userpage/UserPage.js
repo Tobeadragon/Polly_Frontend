@@ -44,7 +44,7 @@ const UserPage = (props) => {
   return (
     <div>
       <main className="UserPage">
-        <header className="UserHeader">Welcome to {name}'s page</header>
+        <header className="UserHeader">Wilkommen {name}</header>
         <div className="SubHeader">
           {umfragen.length > 0 ? (
             <p>Klicken Sie auf die Umfrage, um sich die Ergebnisse anzeigen zu lassen.</p>

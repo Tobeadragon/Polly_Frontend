@@ -170,7 +170,7 @@ const Signup = (props) => {
               onChange={handleChange}
             />
           </FormGroup>
-          <Button color="danger" onClick={handleSubmitClick}>
+          <Button color="primary" onClick={handleSubmitClick}>
             Register
           </Button>
         </Form>
