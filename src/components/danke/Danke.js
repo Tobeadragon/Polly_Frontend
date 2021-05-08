@@ -16,7 +16,7 @@ const Danke = (props) => {
       <header className="DankeHeader">
         Vielen Dank für Ihre Teilnahme an dieser Umfrage!
       </header>
-
+      <div ClassName="DankeList">
       <h4>Zur Umfrageteilnahme senden Sie bitte den Link unten an ihre Kunden.</h4>
       <Link to={`/antwort/${props.surveyId}`} target="_blank">
         <span style={{ display: "block" }}>{linkinfo}</span>
@@ -43,6 +43,8 @@ const Danke = (props) => {
       <br />
       <h4>Sie können auch den QR Code unten an ihre Kunden weiterleiten.</h4><br/>
       <QRCode value={linkinfo} style={{ marginLeft: "30px" }} />
+      
+      </div>
       </main>
     </div>
   );

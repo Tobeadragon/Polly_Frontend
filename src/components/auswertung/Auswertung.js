@@ -30,11 +30,17 @@ const Auswertung = (props) => {
   console.log(umfrageTitel);
 
   return (
-    <div className="Auswertung">
+    <div >
+       <main className="Auswertung">
+       <header className="AuswertungsHeader">
+        Ihre Umfragen Ergebnis
+      </header>
+      <div className="AuswertungsBlock">
+      <div className="AuswertungsErgebnis">
       {umfrageTitel.length > 0 ? (
-        <h3>Your Umfrage : {umfrageTitel}</h3>
+        <div className="AuswertungsStatus">Your Umfrage : {umfrageTitel}</div>
       ) : (
-        <h3>There is no Survey result yet</h3>
+        <div className="AuswertungsStatus">There is no Survey result yet</div>
       )}
 
       <ul style={{ listStyleType: "none" }}>
@@ -48,7 +54,11 @@ const Auswertung = (props) => {
           </li>
         ))}
       </ul>
+      </div>
+      </div>
+      </main>
     </div>
+    
   );
 };
 
