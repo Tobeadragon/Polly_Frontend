@@ -1,50 +1,56 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.Danke{
-    height: 100vh;
-    margin-top:75px;
-    
+.Danke {
+  min-height: 100vh;
+  margin-top: 75px;
 }
 
-.DankeList{
-    margin-left: 20px;
+.DankeHeader {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 20px auto;
+  background-color: red;
+  width: 100%;
+  color: white;
+  padding: 10px;
+  text-shadow: 2px 2px 2px black;
 }
 
-.DankeHeader{
-    text-align: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    margin: 20px auto;
-    background-color: red;
-    width: 100%;
-    color: white;
-    padding: 10px;
-    text-shadow: 2px 2px 2px black;
+.Danke2Titel {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.Danke2Text {
+  font-size: 1.5rem;
 }
 
-.Danke2Titel{
-    font-size: 2.5rem;
-    font-weight: bold;
-}
-.Danke2Text{
-    font-size: 1.5rem;
+.DankeMessage {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 5px;
+  margin-left: 20px;
+  margin-top: 10px;
 }
 
-@media screen and (max-width:780px) {
-.DankeHeader{
+
+
+@media screen and (max-width: 780px) {
+  .DankeHeader {
     font-size: 1.2rem;
-}
+  }
 
-.Danke2Titel{
+  .Danke2Titel {
     font-size: 1.5rem;
-}
-.Danke2Text{
+  }
+  .Danke2Text {
     font-size: 1.2rem;
-}
-
-
+  }
+  .DankeMessage {
+    font-size: 1.2rem;
+  }
 }

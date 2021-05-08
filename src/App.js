@@ -18,6 +18,7 @@ import NotFound from "./components/NotFound";
 import Auswertung from "./components/auswertung/Auswertung";
 import SurveyTest from "./components/surveytest/SurveryTest";
 import Hilfeseite from "./components/hilfeseite/Hilfeseite";
+import Danke from "./components/danke/Danke";
 
 function App(props) {
   const [isAuth, setIsAuth] = useState(false);
@@ -73,6 +74,13 @@ function App(props) {
           <Route path="/hilfeseite">
             <Hilfeseite />
           </Route>
+
+          <Route path="/danke">
+            <Danke />
+          </Route>
+          
+          
+
 
           <Route path="*">
             <NotFound />

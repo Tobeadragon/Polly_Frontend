@@ -7,9 +7,9 @@ const Hilfeseite = () => {
       <header className="header">Hilfeseite</header>
       <div className="HilfeArtikel">
       <div>
-        <h2 className="subtitle">Tipps erstellen:</h2>
+        <h2 className="HilfeTips">Tipps erstellen:</h2>
         <div>
-          <h3 className="subtitle">1. Formulieren Sie die Fragen neutral</h3>
+          <h3 className="HilfeHeadline">1. Formulieren Sie die Fragen neutral</h3>
           <p>
             <span className="emphasise">
               "Wir sind der Meinung, unsere Servicemitarbeiter sind wirklich
@@ -24,7 +24,7 @@ const Hilfeseite = () => {
         </div>
 
         <div>
-          <h3 className="subtitle">
+          <h3 className="HilfeHeadline">
             2. Geben sie nicht nur einseitige Antwortoptionen vorBsp.
           </h3>
           <p>
@@ -35,7 +35,7 @@ const Hilfeseite = () => {
         </div>
 
         <div>
-          <h3 className="subtitle">
+          <h3 className="HilfeHeadline">
             3. Fragen Sie nicht zwei Dinge gleichzeitig
           </h3>
           <p>
@@ -47,7 +47,7 @@ const Hilfeseite = () => {
         </div>
 
         <div>
-          <h3 className="subtitle">
+          <h3 className="HilfeHeadline">
             4. Nutzen Sie nicht immer dieselben Fragestellungen
           </h3>
 
@@ -65,7 +65,7 @@ const Hilfeseite = () => {
         </div>
 
         <div>
-          <h3 className="subtitle">
+          <h3 className="HilfeHeadline">
             5. Achten Sie darauf, das ihre Umfrage nicht zu lang wird
           </h3>
 
