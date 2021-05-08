@@ -38,9 +38,9 @@ const Auswertung = (props) => {
       <div className="AuswertungsBlock">
       <div className="AuswertungsErgebnis">
       {umfrageTitel.length > 0 ? (
-        <div className="AuswertungsStatus">Your Umfrage : {umfrageTitel}</div>
+        <div className="AuswertungsStatus">Ihre Umfrage Titel: {umfrageTitel}</div>
       ) : (
-        <div className="AuswertungsStatus">There is no Survey result yet</div>
+        <div className="AuswertungsStatus">Es gibt noch keine Ihre Umfrage Ergebnis</div>
       )}
 
       <ul style={{ listStyleType: "none" }}>

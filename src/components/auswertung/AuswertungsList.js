@@ -86,7 +86,7 @@ const AuswertungsList = (props) => {
       <div className="FrageTitel">{questions}</div>
       <div className="AuswertungsContainer">
         <div>
-                  <div className="AuswertungsTotalZahl">Total voter für diese Frage {totalvoter}</div>
+                  <div className="AuswertungsTotalZahl">Geantwortet Zahl für diese Frage: {totalvoter}</div>
           <ul className="liststyle">
             {auswahl.map((answer, i) => (
               <li key={i}>

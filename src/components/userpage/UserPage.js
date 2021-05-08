@@ -53,7 +53,8 @@ const UserPage = (props) => {
           )}
         </div>
 
-        <div>
+        <div >
+          <div className="UmfrageListTitel">Ihre erstellte Umfragen Liste</div>
           <ul className="UmfrageList">
             {umfragen.map((umf, index) => (
               <Link to="/auswertung" kex={index} className="UserUmfrageList">
