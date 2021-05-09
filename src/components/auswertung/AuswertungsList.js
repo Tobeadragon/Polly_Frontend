@@ -82,15 +82,15 @@ const AuswertungsList = (props) => {
   return (
     <div>
       <main>
-        <hr />
+        
       <div className="FrageTitel">{questions}</div>
       <div className="AuswertungsContainer">
         <div>
-                  <div className="AuswertungsTotalZahl">Geantwortet Zahl für diese Frage: {totalvoter}</div>
+                  <div className="AuswertungsTotalZahl">Gesamtantworten: {totalvoter}</div>
           <ul className="liststyle">
             {auswahl.map((answer, i) => (
-              <li key={i}>
-                <span className="AuswertungsAuswahl">Auswahl: {answer[0]} / AntwortZahl: {answer[1]}</span>
+              <li key={i} className="AuswertungsLi">
+                <div className="AuswertungsAuswahl" >{answer[0]}</div><div className="AuswertungsStimmen"> Stimmen: <span style={{color:"#0069D9",paddingLeft:"10px"}}>{answer[1]}</span></div>
               </li>
             ))}
           </ul>

@@ -11,18 +11,21 @@
     display: flex;
     justify-content: space-evenly;
     flex-direction: row;
-    background-color: white;
-    margin: 10px;
-    border: 1px solid blue;
+    margin: 10px 10px;
+    border:1px solid rgba(138, 138, 138, 0.226);
     border-radius: 30px;
+    background-color:#c5c2c25e;
     
+      
     
 }
 
 .AuswertungsTotalZahl{
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
-    color: blue;
+    color: dimgrey;
+    margin-bottom: 20px;
+    
 }
 
 .liststyle{
@@ -33,21 +36,40 @@
     font-size: 1.5rem;
     font-weight: bold;
     text-align: center;
+    color: #0069D9;
+    margin-top: 20px;
+    
+}
+
+
+
+.AuswertungsLi{
+    display: flex;
+    margin: auto 0;
+    
 }
 
 .AuswertungsAuswahl{
     font-size: 1.2rem;
     font-weight: bold;
+        width: 200px;
+        
+        text-align: left;
 }
-.AuswertungsZahl{
+
+.AuswertungsStimmen{
     font-size: 1.2rem;
     font-weight: bold;
-}
+    width:150px;
+    
+    text-align: left;
+        }
 
 .PieChart{
     /* border: 1px solid black; */
     margin-left: 15px;
-    background-color: white;
+
+    
     
 }
 
@@ -57,6 +79,9 @@
        align-items: center;
    }
 
+   .AuswertungsTotalZahl{
+       font-size: 1.5rem;
+   }
 
    .FrageTitel{
        font-size: 1.2rem;

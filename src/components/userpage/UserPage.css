@@ -19,11 +19,13 @@
     margin-left: 20px;
     font-size: 1.5rem;
     font-weight: bold;
+    text-align: center;
     
 }
 
 .UserUmfrageList {
   color: blue;
+  text-align: center;
 }
 .UserUmfrageList:hover {
   color: darkblue;
@@ -47,11 +49,10 @@
   margin-bottom: 20px;
   font-size: 2rem;
   font-weight: bold;
+  text-align: left;
 }
 
-.UserButton {
-  margin: 20px;
-}
+
 
 @media screen and (max-width: 780px) {
   .UserHeader {

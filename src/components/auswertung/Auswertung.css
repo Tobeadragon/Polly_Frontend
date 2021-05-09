@@ -25,6 +25,7 @@
 .AuswertungsStatus{
     font-size: 2rem;
     font-weight: bold;
+    text-align: center;
 }
 
 .AuswertungsBlock{

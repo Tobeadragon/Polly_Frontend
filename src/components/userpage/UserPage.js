@@ -54,7 +54,7 @@ const UserPage = (props) => {
         </div>
 
         <div >
-          <div className="UmfrageListTitel">Ihre erstellte Umfragen Liste</div>
+          <div className="UmfrageListTitel">Ihre Umfragen</div>
           <ul className="UmfrageList">
             {umfragen.map((umf, index) => (
               <Link to="/auswertung" kex={index} className="UserUmfrageList">
@@ -65,13 +65,16 @@ const UserPage = (props) => {
             ))}
           </ul>
         </div>
+        <div class="d-flex justify-content-center">
         <Button
           color="primary"
           onClick={() => GoCreate()}
-          style={{marginLeft:"20px"}}
+          className="UserButton"
+          
         >
-          Umfrage erstellen
+          Neue Umfrage erstellen
         </Button>
+        </div>
       </main>
     </div>
   );

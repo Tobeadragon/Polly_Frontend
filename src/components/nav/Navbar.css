@@ -40,43 +40,29 @@
   width: 75%;
 }
 
-.main,
-.hilfe,
-.home,
-.antwort,
-.login,
-.logout,
-.userpage,
-.signup{
+.navMenu
+{
     text-decoration: none;
     color: black;
     font-size: 15px;
+    font-weight: bold;
     padding: 10px 20px;
     margin: 0 10px;
     cursor: pointer;
-}
-
-.main:hover,
-.hilfe:hover
-.home:hover,
-.antwort,
-.login:hover,
-.logout:hover,
-.userpage:hover
-.signup:hover
-{
-    color: blue;
-    font-weight: bold;
-}
-
-
-
-.login:hover,
-.logout:hover,
-.userpage:hover
-.signup:hover{
     
+
 }
+.navMenu:hover
+
+{
+    color: grey;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+
+
 
 
 .mobile-menu-icon{
@@ -105,15 +91,8 @@
         width: 100%;
         z-index: 10;
     }
-
-    .main,
-    .hilfe,
-    .home,
-    .antwort,
-    .login,
-    .logout,
-    .userpage,
-    .signup{
+    .navMenu
+    {
         color: white;
         text-align:center;
         padding: 32px;
@@ -121,10 +100,7 @@
         transition: all 0.5s ease;
         
     }
-    .login,
-    .logout,
-    .userpage,
-    .signup{
+    .navMenu{
         border: none;
         
     }

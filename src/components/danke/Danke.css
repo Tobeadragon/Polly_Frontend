@@ -2,11 +2,13 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 
 .Danke {
   min-height: 100vh;
   margin-top: 75px;
+  
 }
 
 .DankeHeader {

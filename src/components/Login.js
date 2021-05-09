@@ -124,7 +124,7 @@ const Login = (props) => {
         ariaHideApp={false}
         contentLabel="Selected Option"
       >
-        <h1>Login</h1>
+        <h1>Anmeldung</h1>
         <Link to="/">
           <i onClick={closeModal} className="closeBtn fas fa-times"></i>
         </Link>
@@ -136,25 +136,25 @@ const Login = (props) => {
               type="email"
               className=""
               id="email"
-              placeholder="Input your email"
+              placeholder="bitte E-Mail eingeben"
               value={state.email}
               onChange={handleChange}
             />
           </FormGroup>
           <FormGroup className="">
-            <Label htmlFor="InputPassword">Password</Label>
+            <Label htmlFor="InputPassword">Passwort</Label>
             <Input
               type="password"
               className=""
               id="password"
-              placeholder="Input your Password"
+              placeholder="bitte Passwort eingeben"
               value={state.password}
               onChange={handleChange}
             />
           </FormGroup>
 
           <Button color="primary" onClick={handleSubmitClick}>
-            Login
+            Anmelden
           </Button>
         </Form>
 
@@ -162,16 +162,16 @@ const Login = (props) => {
         <div className="G_login">
           <GoogleLogin
             clientId={process.env.REACT_APP_GOOGLECLIENTID}
-            buttonText="Login mit Google"
+            buttonText="Anmelden mit Google"
             onSuccess={responseSuccessGoogle}
             onFailure={responseFailureGoogle}
             cookiePolicy={"single_host_origin"}
           />
         </div>
         <div className="mt-2">
-          <span className="modalText">Don't you have an account? </span>
-          <span className="loginText" onClick={() => redirectToRegister()}>
-            Register
+          <span className="modalText">Noch kein Nutzerkonto? </span>
+          <span className="loginText" onClick={() => redirectToRegister()}> 
+            Registrierung
           </span>
         </div>
       </Modal>

@@ -7,7 +7,7 @@ const Main = () => {
     <div>
       <main className="Main">
         <header className="MainHeader">
-          Ihre Umfrage Erstellungs Service Polly
+          Ihr Umfrage Erstellungs-Service Polly
         </header>
         <div className="Ueberuns">
           <div className="MainArtikelTitel">Unsere Arten von Umfragen</div>

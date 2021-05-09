@@ -75,49 +75,57 @@ const ServeryTest = (props) => {
       ) : (
         <main className="SurveyTest">
           <header className="SurveyHeader">
-            Bitte geben Sie uns Ihre Meinung
+            Bitte teilen Sie uns Ihre Meinung mit.
           </header>
           <div className="SurveyList">
-          <ul style={{ listStyleType: "none" }}>
-            <div className="SurveyTitel" style={{ fontWeight: "bold" }}>{umfrageTitel}</div>
-            <form action="" onSubmit={surveySend}>
-              {antwortOption.map((frg, indexfrage) => {
-                return (
-                  <li key={indexfrage}>
-                    <p
-                      style={{
-                        fontSize: "20px",
-                        margin: "0",
-                        marginTop: "20px",
-                        fontWeight: "bold",
-                      }}
-                    >
-                      {frg.frage}{" "}
-                    </p>
-                    {frg.antworten.map((antwort, indexantwort) => {
-                      return (
-                        <div key={indexantwort}>
-                          <p style={{ display: "none" }}>{frg._id}</p>
-                          {/* <label >{ant}</label> */}
-                          <input
-                            id={frg._id}
-                            type="radio"
-                            name={indexfrage}
-                            value={antwort}
-                            onChange={() => addAntwortToListe(antwort, frg._id)}
-                            key={indexantwort}
-                          />
-                          {antwort}
-                        </div>
-                      );
-                    })}
-                  </li>
-                );
-              })}
-              <br />
-              <Button color="primary">Send your answer</Button>
-            </form>
-          </ul>
+            <ul style={{ listStyleType: "none" }}>
+              <div className="SurveyTitel" style={{ fontWeight: "bold", textAlign:"center" }}>
+                {umfrageTitel}
+              </div>
+              <form action="" onSubmit={surveySend}>
+                {antwortOption.map((frg, indexfrage) => {
+                  return (
+                    <li key={indexfrage}>
+                      <p
+                          style={{
+                          fontSize: "20px",
+                          margin: "0",
+                          marginTop: "20px",
+                          fontWeight: "bold",
+                          textAlign:"center",
+                          color:"#0069D9"
+                        }}
+                      >
+                        {frg.frage}{" "}
+                      </p>
+                      {frg.antworten.map((antwort, indexantwort) => {
+                        return (
+                          <div key={indexantwort} className="AuswahlsListe">
+                            <p style={{ display: "none" }}>{frg._id}</p>
+                            {/* <label >{ant}</label> */}
+                            <input
+                              id={frg._id}
+                              type="radio"
+                              name={indexfrage}
+                              value={antwort}
+                              onChange={() =>
+                                addAntwortToListe(antwort, frg._id)
+                              }
+                              key={indexantwort}
+                            />
+                            {antwort}
+                          </div>
+                        );
+                      })}
+                    </li>
+                  );
+                })}
+                
+                <div class="d-flex justify-content-center">
+                  <Button color="primary mt-3">Senden</Button>
+                </div>
+              </form>
+            </ul>
           </div>
         </main>
       )}

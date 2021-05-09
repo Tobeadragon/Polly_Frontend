@@ -121,7 +121,7 @@ const Signup = (props) => {
         className="Modal"
         overlayClassName="Overlay"
       >
-        <h1>Registrieren</h1>
+        <h1>Registrierung</h1>
         <a href="/">
           <i onClick={closeModal} className="closeBtn fas fa-times"></i>
         </a>
@@ -132,7 +132,8 @@ const Signup = (props) => {
               type="text"
               className=""
               id="name"
-              placeholder="Input your name"
+              placeholder="bitte Namen eingeben
+              "
               value={state.name}
               onChange={handleChange}
             />
@@ -143,35 +144,35 @@ const Signup = (props) => {
               type="email"
               className=""
               id="email"
-              placeholder="Input your email"
+              placeholder="bitte E-Mail eingeben"
               value={state.email}
               onChange={handleChange}
             />
           </FormGroup>
           <FormGroup className="">
-            <Label htmlFor="InputPassword">Password</Label>
+            <Label htmlFor="InputPassword">Passwort</Label>
             <Input
               type="password"
               className=""
               id="password"
-              placeholder="Input your Password"
+              placeholder="bitte Passwort eingeben"
               value={state.password}
               onChange={handleChange}
             />
           </FormGroup>
           <FormGroup className="">
-            <Label htmlFor="ConfirmPassword">Confirm Password</Label>
+            <Label htmlFor="ConfirmPassword">Passwort bestätigen</Label>
             <Input
               type="password"
               className=""
               id="confirmPassword"
-              placeholder="Confirm your Password"
+              placeholder="bitte Passwort bestätigen"
               value={state.confirmPassword}
               onChange={handleChange}
             />
           </FormGroup>
           <Button color="primary" onClick={handleSubmitClick}>
-            Register
+            Registrieren
           </Button>
         </Form>
         <div
@@ -184,16 +185,16 @@ const Signup = (props) => {
         <div className="G_login">
           <GoogleLogin
             clientId={process.env.REACT_APP_GOOGLECLIENTID}
-            buttonText="Login mit Google"
+            buttonText="Anmelden mit Google"
             onSuccess={responseSuccessGoogle}
             onFailure={responseFailureGoogle}
             cookiePolicy={"single_host_origin"}
           />
         </div>
         <div className="mt-2">
-          <span className="modalText">Already have an account? </span>
+          <span className="modalText">Haben Sie bereits ein Nutzerkonto? </span>
           <span className="loginText" onClick={() => redirectToLogin()}>
-            Login here
+          Einloggen
           </span>
         </div>
       </Modal>
