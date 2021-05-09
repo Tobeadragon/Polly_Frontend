@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Danke from "../danke/Danke";
+import "./umfrage.css";
 import { withRouter } from "react-router-dom";
 import axios from "axios";
 import {
@@ -96,8 +97,8 @@ const Umfrage = (props) => {
           surveyId={umfrageIds}
         />
       ) : (
-        <div className="container border p-5 my-5 rounded border-dark">
-          <h1 className="bg-dark text-light p-2 text-center">Neue Umfrage</h1>
+        <div id="container" className ="container border p-5 my-5 rounded border-primary">
+          <h1 id="umfragen" className="text-light shadow p-2 text-center rounded">Neue Umfrage</h1>
           <Form>
             <FormGroup>
               <Label for="frage">
@@ -111,13 +112,13 @@ const Umfrage = (props) => {
                 value={umfrageName}
               />
             </FormGroup>
-            <div className="border p-4">
+            <div className="border p-4 border-.">
               {fragen.map((einefrage, index) => {
                 return (
                   <div key={index}>
                     <FormGroup>
                       <Label for="frage">
-                        <h5>Frage</h5>
+                        <h3>Frage</h3>
                       </Label>
                       <Input
                         type="text"
@@ -131,10 +132,10 @@ const Umfrage = (props) => {
                     <h5>Antwortmöglichkeiten</h5>
                     <ListGroup>
                       <ListGroupItem
-                        color="secondary"
+                        color="white"
                         className="d-flex justify-content-center align-items-center"
                       >
-                        <Button href="#" color="dark" className="mr-5 rounded">
+                        <Button id="center" href="#" color="primary" className="mr-5 rounded">
                           A
                         </Button>
                         <Input
@@ -146,10 +147,10 @@ const Umfrage = (props) => {
                         />
                       </ListGroupItem>
                       <ListGroupItem
-                        color="secondary"
+                        color="white"
                         className="d-flex justify-content-center align-items-center"
                       >
-                        <Button href="#" color="dark" className="mr-5 rounded">
+                        <Button id="center" href="#" color="primary" className="mr-5 rounded">
                           B
                         </Button>
                         <Input
@@ -161,10 +162,10 @@ const Umfrage = (props) => {
                         />
                       </ListGroupItem>
                       <ListGroupItem
-                        color="secondary"
+                        color="white"
                         className="d-flex justify-content-center align-items-center"
                       >
-                        <Button href="#" color="dark" className="mr-5 rounded">
+                        <Button id="center" href="#" color="primary" className="mr-5 rounded">
                           C
                         </Button>
                         <Input
@@ -176,10 +177,10 @@ const Umfrage = (props) => {
                         />
                       </ListGroupItem>
                       <ListGroupItem
-                        color="secondary"
+                        color="white"
                         className="d-flex justify-content-center align-items-center"
                       >
-                        <Button href="#" color="dark" className="mr-5 rounded">
+                        <Button id="center" href="#" color="primary" className="mr-5 rounded">
                           D
                         </Button>
                         <Input
@@ -194,13 +195,13 @@ const Umfrage = (props) => {
                   </div>
                 );
               })}
-              <Button className="my-3" onClick={handleClickFrage}>
-                Möchten Sie eine neue Frage hinzufügen ?
+              <Button className="my-3" color="warning" onClick={handleClickFrage}>
+                Weitere Fragen hinzufügen 
               </Button>
             </div>
             <div className="text-right my-3">
-              <Button onClick={handleSubmit} color="dark">
-                Erstellen
+              <Button onClick={handleSubmit} color="primary">
+                 Umfrage erstellen
               </Button>
             </div>
           </Form>
