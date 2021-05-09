@@ -118,7 +118,7 @@ const Umfrage = (props) => {
                   <div key={index}>
                     <FormGroup>
                       <Label for="frage">
-                        <h5>Bitte Frage eingeben.</h5>
+                        <h5 id="abstand">Bitte Frage eingeben.</h5>
                       </Label>
                       <Input
                         type="text"
