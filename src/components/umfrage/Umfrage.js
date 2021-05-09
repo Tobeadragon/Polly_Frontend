@@ -129,7 +129,7 @@ const Umfrage = (props) => {
                         value={einefrage.frage}
                       />
                     </FormGroup>
-                    <h5>Bitte geben Sie Ihre Antwortmöglichkeiten an</h5>
+                    <h5>Bitte geben Sie Ihre Antwortmöglichkeiten an.</h5>
                     <ListGroup>
                       <ListGroupItem
                         color="white"
