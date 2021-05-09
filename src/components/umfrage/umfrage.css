@@ -1,12 +1,12 @@
 #umfragen{
   text-align: center;
-  font-size: 2.5rem;
   font-weight: bold;
   margin: 20px auto;
   background-color: red;
   width: 100%;
   color: white;
   padding: 10px;
+  font-size: 2.0rem;
   text-shadow: 2px 2px 2px black;
 }
 
@@ -27,5 +27,6 @@
   }
   #umfragen{
     margin-top: 1rem;
+    font-size: 1.7rem;
   }
 }
