@@ -33,14 +33,14 @@ const Auswertung = (props) => {
     <div >
        <main className="Auswertung">
        <header className="AuswertungsHeader">
-        Ihre Umfragen Ergebnis
+       Ihre Umfrage Auswertung
       </header>
       <div className="AuswertungsBlock">
       <div className="AuswertungsErgebnis">
       {umfrageTitel.length > 0 ? (
-        <div className="AuswertungsStatus">Ihre Umfrage Titel: {umfrageTitel}</div>
+        <div className="AuswertungsStatus">Umfrage Titel: {umfrageTitel}</div>
       ) : (
-        <div className="AuswertungsStatus">Es gibt noch keine Ihre Umfrage Ergebnis</div>
+        <div className="AuswertungsStatus">Leider liegen noch keine Umfrageergebnisse vor.</div>
       )}
 
       <ul style={{ listStyleType: "none" }}>

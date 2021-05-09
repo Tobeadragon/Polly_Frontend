@@ -31,8 +31,16 @@
     text-shadow: 2px 2px 2px black;
 }
 
-.SurveyList{
-    margin-left: 20px;
+
+
+
+
+.AuswahlsListe{
+   
+    margin: auto;
+    width: 250px;
+    padding-left: 20px;
+
 }
 
 @media screen and (max-width:780px) {

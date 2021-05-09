@@ -28,12 +28,12 @@ const Navbar2 = (props) => {
       onClick={()=> setIsMobile(false)}
       >
        
-       <Link to="/userpage" className="userpage">
-            <li>Userpage</li>
+       <Link to="/userpage" className="navMenu">
+            <li>Benutzerseite</li>
         </Link>
         
-        <Link to="/" className="logout">
-            <li onClick={logout}>Logout</li>
+        <Link to="/" className="navMenu">
+            <li onClick={logout}>Ausloggen</li>
         </Link>
              </ul>
       <button className="mobile-menu-icon"

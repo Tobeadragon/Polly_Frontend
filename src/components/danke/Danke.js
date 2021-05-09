@@ -14,16 +14,16 @@ const Danke = (props) => {
     <div>   
      <main className="Danke">
       <header className="DankeHeader">
-        Vielen Dank für Ihre Teilnahme an dieser Umfrage!
+      Vielen Dank für die Erstellung Ihrer Umfrage.
       </header>
       
       <div ClassName="DankeList">
-      <div className="DankeMessage">Klicken Sie auf eine Umfrage um sich die Ergebnisse anzeigen zu lassen.</div>
+      <div className="DankeMessage">Unter dem Link unten können Sie sich Ihre Umfrageergebnisse anzeigen lassen.</div>
       <Link to={`/antwort/${props.surveyId}`} target="_blank">
         <span style={{ display: "block",marginLeft:"20px",fontWeight:"bold"}}>{linkinfo}</span>
       </Link>
             
-      <div className="DankeMessage">Zur Umfrageteilnahme senden Sie bitte den Link unten an ihre Kunden.</div>
+      <div className="DankeMessage">Zur Umfrageteilnahme kopieren Sie bitte den unteren Link und senden diesen an Ihre Kunden.</div>
       
       <input
         id="copy"
