@@ -27,7 +27,7 @@ const UserPage = (props) => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [umfragen]);
 
   const GoCreate = () => {
     props.history.push("./umfrage");
@@ -46,7 +46,7 @@ const UserPage = (props) => {
     .then((response) => {
       console.log(response);
       console.log(response.data);
-      setUmfragen(umfragen.filter((item) => item.id !== umfragen.id))
+      // setUmfragen(umfragen.filter((item) => item.id !== umfragen.id))
     })
     .catch((error) => {
       console.log(error);
