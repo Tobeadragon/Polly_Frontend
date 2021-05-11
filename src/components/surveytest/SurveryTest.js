@@ -88,9 +88,10 @@ const ServeryTest = (props) => {
                     <li key={indexfrage}>
                       <p
                           style={{
-                          fontSize: "20px",
+                          fontSize: "15px",
                           margin: "0",
                           marginTop: "20px",
+                          marginBottom:"10px",
                           fontWeight: "bold",
                           textAlign:"center",
                           color:"#0069D9"
@@ -113,7 +114,7 @@ const ServeryTest = (props) => {
                               }
                               key={indexantwort}
                             />
-                            {antwort}
+                            <span className="SelectionText">{antwort}</span>
                           </div>
                         );
                       })}
@@ -121,7 +122,7 @@ const ServeryTest = (props) => {
                   );
                 })}
                 
-                <div class="d-flex justify-content-center">
+                <div className="d-flex justify-content-center">
                   <Button color="primary mt-3">Senden</Button>
                 </div>
               </form>

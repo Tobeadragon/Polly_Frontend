@@ -171,9 +171,11 @@ const Signup = (props) => {
               onChange={handleChange}
             />
           </FormGroup>
+          <div class="d-flex justify-content-center">
           <Button color="primary" onClick={handleSubmitClick}>
             Registrieren
           </Button>
+          </div>
         </Form>
         <div
           className=""

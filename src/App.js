@@ -19,6 +19,7 @@ import Auswertung from "./components/auswertung/Auswertung";
 import SurveyTest from "./components/surveytest/SurveryTest";
 import Hilfeseite from "./components/hilfeseite/Hilfeseite";
 
+
 function App(props) {
   const [isAuth, setIsAuth] = useState(false);
 
@@ -73,6 +74,8 @@ function App(props) {
           <Route path="/hilfeseite">
             <Hilfeseite />
           </Route>
+
+          
 
           <Route path="*">
             <NotFound />

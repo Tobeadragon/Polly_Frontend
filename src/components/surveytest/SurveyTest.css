@@ -9,10 +9,10 @@
     
     margin-top:75px;
 
-  
-    
-    
+ 
 }
+
+
 
 .SurveyTitel{
     font-size: 2rem;
@@ -38,9 +38,19 @@
 .AuswahlsListe{
    
     margin: auto;
-    width: 250px;
+    width: 300px;
     padding-left: 20px;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    background-color: azure;
+    color:dimGrey
 
+}
+
+.SelectionText{
+    padding-left: 10px;
+    font-weight: bold;
 }
 
 @media screen and (max-width:780px) {
@@ -49,6 +59,11 @@
     }
     .SurveyTitel{
         font-size: 1.5rem;
+    }
+
+    .AuswahlsListe{
+        text-align: left;
+        
     }
 
 }

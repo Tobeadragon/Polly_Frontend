@@ -11,7 +11,7 @@ const Login = (props) => {
 
   const closeModal = () => {
     setIsOpen(false);
-    props.history.push("/")
+    props.history.push("/");
   };
 
   const [state, setState] = useState({
@@ -98,7 +98,7 @@ const Login = (props) => {
       console.log(response);
       localStorage.setItem("google_id", response.data.token);
       localStorage.setItem("user_name", response.data.name);
-      localStorage.setItem("umfrage_id",response.data.token);
+      localStorage.setItem("umfrage_id", response.data.token);
       const userPageGoogle = localStorage.getItem("google_id");
       console.log(userPageGoogle);
       if (userPageGoogle) {
@@ -152,10 +152,11 @@ const Login = (props) => {
               onChange={handleChange}
             />
           </FormGroup>
-
-          <Button color="primary" onClick={handleSubmitClick}>
-            Anmelden
-          </Button>
+          <div class="d-flex justify-content-center">
+            <Button color="primary" onClick={handleSubmitClick}>
+              Anmelden
+            </Button>
+          </div>
         </Form>
 
         <div className="">{state.successMessage}</div>
@@ -170,7 +171,7 @@ const Login = (props) => {
         </div>
         <div className="mt-2">
           <span className="modalText">Noch kein Nutzerkonto? </span>
-          <span className="loginText" onClick={() => redirectToRegister()}> 
+          <span className="loginText" onClick={() => redirectToRegister()}>
             Registrierung
           </span>
         </div>
