@@ -3,6 +3,7 @@ import { withRouter, Link } from "react-router-dom";
 import "./UserPage.css";
 import { Button } from "reactstrap";
 import axios from "axios";
+import { FaTrash } from 'react-icons/fa';
 
 const UserPage = (props) => {
   const [umfragen, setUmfragen] = useState([]);
@@ -26,11 +27,31 @@ const UserPage = (props) => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [umfragen]);
 
   const GoCreate = () => {
     props.history.push("./umfrage");
   };
+
+  const deleteUmfrage = (id) => {
+    console.log("click", id)
+    let token = localStorage.getItem("user_token");
+    console.log(token);
+    const headers = {
+      "Content-Type": "application/json",
+      authorization: `Bearer ${token}`,
+    };
+    axios
+    .delete(`${process.env.REACT_APP_BACKENDURL}/umfrage/${id}`, { headers: headers })
+    .then((response) => {
+      console.log(response);
+      console.log(response.data);
+      // setUmfragen(umfragen.filter((item) => item.id !== umfragen.id))
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+  }
 
   const name = localStorage.getItem("user_name");
   console.log(name);
@@ -57,11 +78,14 @@ const UserPage = (props) => {
           <div className="UmfrageListTitel">Ihre Umfragen</div>
           <ul className="UmfrageList">
             {umfragen.map((umf, index) => (
+              <>
               <Link to="/auswertung" kex={index} className="UserUmfrageList">
-                <li onClick={() => saveUmfrageId(umf._id)} key={index}>
+                <li className="UmfrageLi" onClick={() => saveUmfrageId(umf._id)} key={index}>
                   <h5>{umf.titel}</h5>
                 </li>
-              </Link>
+              </Link>  
+              <span onClick={()=>deleteUmfrage(umf._id)}><FaTrash/></span>  
+              </>       
             ))}
           </ul>
         </div>
