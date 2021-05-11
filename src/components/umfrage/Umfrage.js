@@ -97,12 +97,12 @@ const Umfrage = (props) => {
           surveyId={umfrageIds}
         />
       ) : (
-        <div id="container" className ="container border p-5 my-5 rounded border-primary">
+        <div id="container" className ="container border p-5 my-5 rounded border">
           <h1 id="umfragen" className="text-light shadow p-2 text-center rounded">Neue Umfrage</h1>
           <Form>
             <FormGroup>
               <Label for="frage">
-                <h3>Bitte geben Sie einen Umfragetitel an.</h3>
+                <h5>Bitte geben Sie einen Umfragetitel an.</h5>
               </Label>
               <Input
                 type="text"
@@ -118,7 +118,7 @@ const Umfrage = (props) => {
                   <div key={index}>
                     <FormGroup>
                       <Label for="frage">
-                        <h4>Bitte Frage eingeben.</h4>
+                        <h5 id="abstand">Bitte Frage eingeben.</h5>
                       </Label>
                       <Input
                         type="text"
@@ -129,7 +129,7 @@ const Umfrage = (props) => {
                         value={einefrage.frage}
                       />
                     </FormGroup>
-                    <h4>Bitte geben Sie Ihre Antwortmöglichkeiten an.</h4>
+                    <h5>Bitte geben Sie Ihre Antwortmöglichkeiten an.</h5>
                     <ListGroup>
                       <ListGroupItem
                         color="white"

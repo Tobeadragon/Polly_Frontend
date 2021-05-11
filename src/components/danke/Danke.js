@@ -19,18 +19,21 @@ const Danke = (props) => {
       
       <div ClassName="DankeList">
       <div className="DankeMessage">Unter dem Link unten können Sie sich Ihre Umfrageergebnisse anzeigen lassen.</div>
-      <Link to={`/antwort/${props.surveyId}`} target="_blank">
-        <span style={{ display: "block",marginLeft:"20px",fontWeight:"bold"}}>{linkinfo}</span>
+      <Link to={`/antwort/${props.surveyId}`} target="_blank" >
+        <div className="DankeLink">{linkinfo}</div>
       </Link>
             
       <div className="DankeMessage">Zur Umfrageteilnahme kopieren Sie bitte den unteren Link und senden diesen an Ihre Kunden.</div>
+      
       
       <input
         id="copy"
         type="text"
         value={linkinfo}
-        style={{ width: "200px",height:"35px",paddingLeft:"5px", marginLeft:"20px" }}
-      />
+        className = "DankeShareLink"
+        />
+      
+      <div className="d-flex justify-content-center">
       <Button
         color="primary"
         onClick={(e) => {
@@ -42,11 +45,13 @@ const Danke = (props) => {
       >
         Link kopieren
       </Button>
-      <br />
+      </div>
+      
       
       <div className="DankeMessage">Sie können auch den QR Code unten an ihre Kunden weiterleiten.</div><br/>
-      <QRCode value={linkinfo} style={{ marginLeft: "30px" }} />
-      
+      <div class="QrCode">
+      <QRCode value={linkinfo}/>
+      </div>
       </div>
       
       </main>

@@ -7,10 +7,10 @@ const Hilfeseite = () => {
         <header className="header">Hilfeseite</header>
         <div className="HilfeArtikel">
           <div>
-            <h2 className="HilfeTips">Tipps erstellen:</h2>
+            <h2 className="HilfeTips">Tipps zum Erstellen Ihrer Umfrage</h2>
             <div>
               <h3 className="HilfeHeadline">
-                1. Formulieren Sie die Fragen neutral
+              💡 Formulieren Sie die Fragen neutral
               </h3>
               <p>
                 <span className="emphasise">
@@ -28,18 +28,20 @@ const Hilfeseite = () => {
 
             <div>
               <h3 className="HilfeHeadline">
-                2. Geben sie nicht nur einseitige Antwortoptionen vor bspw.
+              <span>💡</span>Geben sie nicht nur einseitige Antwortoptionen z.b.
               </h3>
               <p>
                 <span className="emphasise">
-                  1.Äußerst hilfsbereit 2.Sehr hilfsbereit 3.Hilfsbereit
+                  1. Äußerst hilfsbereit <br/>
+                  2. Sehr hilfsbereit <br/>
+                  3. Hilfsbereit<br/>
                 </span>
               </p>
             </div>
 
             <div>
               <h3 className="HilfeHeadline">
-                3. Fragen Sie nicht zwei Dinge gleichzeitig.
+              <span>💡</span>Fragen Sie nicht zwei Dinge gleichzeitig.
               </h3>
               <p>
                 <span className="emphasise">
@@ -51,7 +53,7 @@ const Hilfeseite = () => {
 
             <div>
               <h3 className="HilfeHeadline">
-                4. Nutzen Sie nicht immer dieselben Fragestellungen.
+              <span>💡</span>Nutzen Sie nicht immer dieselben Fragestellungen.
               </h3>
 
               <p>
@@ -69,7 +71,7 @@ const Hilfeseite = () => {
 
             <div>
               <h3 className="HilfeHeadline">
-                5. Achten Sie darauf, das ihre Umfrage nicht zu lang wird.
+              💡 Beachten Sie, das ihre Umfrage nicht zu lang wird.
               </h3>
 
               <p>

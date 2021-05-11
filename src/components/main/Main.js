@@ -19,6 +19,7 @@ const Main = () => {
         </div>
         <div className="">
           <ul className="Anleitung">
+            
             <li className="Acard c1">
               <div className="MainArtikelTitel">Erstellen</div>
               <p>
@@ -30,12 +31,13 @@ const Main = () => {
                 gezeigt, das es sich anbietet nicht mehr als 4 Antwortoptionen
                 zu geben. Weitere Best Practice Tipps zum Erstellungen ihrer
                 Umfragen finden sie auf unserer{" "}
-                <Link to="/hilfeseite" style={{ color: "yellow" }}>
+                <Link to="/hilfeseite" style={{ color: "yellow",textDecoration:"none" }}>
                   Hilfsseite(Link zur Hilfseite)
                 </Link>
                 .
               </p>
             </li>
+            
             <li className="Acard c2">
               <div className="MainArtikelTitel">Teilen</div>
               <p>
