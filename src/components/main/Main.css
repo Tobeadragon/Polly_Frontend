@@ -5,9 +5,16 @@
     
 }
 
+.backgroundPic{
+background-image: url('../../img/survey.png');
+background-repeat: no-repeat;
+filter: grayscale(100%);
+}
+
 .Main{
     height: 100vh;
     margin-top: 75px;
+    
 }
 
 .MainHeader{
