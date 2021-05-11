@@ -98,6 +98,7 @@ const UserPage = (props) => {
         >
           Neue Umfrage erstellen
         </Button>
+        <p>Klicken Sie auf<FaTrash/>um Ihre Umfrage zu löschen.</p>
         </div>
       </main>
     </div>

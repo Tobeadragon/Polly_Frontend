@@ -16,8 +16,14 @@
 }
 
 .HilfeArtikel{
-    margin-left: 20px;
-    width: 90%;
+    width: 70%;
+    margin:2rem auto;
+    padding:1rem;
+    background-color:lightblue;   
+    /* border: 2px solid grey; */
+    border:2px solid rgb(55, 186, 230);
+    border-radius: 20px;
+    box-shadow: 5px 5px 5px gray;
 }
 
 .title{
@@ -28,16 +34,19 @@
 .HilfeTips{
     font-size: 2rem;
     font-weight: bold;
+    margin:30px 0px;
 }
 
 .HilfeHeadline{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: bold;
 }
 
 .emphasise{
-    color: blue;
     font-weight: bold;
+    color: rgb(94, 92, 92);
+    font-style: italic;
+    
 }
 
 .header{
@@ -63,6 +72,30 @@
    .HilfeHeadline{
        font-size: 1.2rem;
    }
+   .HilfeArtikel{
+    width:90%;
+}
    
 
 }
+
+@media screen and (max-width:450px) {
+    .header{
+        font-size: 1.5rem;
+    }
+ 
+    .HilfeTips{
+        font-size: 1rem;
+    }
+    .HilfeHeadline{
+        font-size: 0.8rem;
+    }
+    .HilfeArtikel{
+        width:100%;
+    }
+    p{
+        font-size: 0.7rem;
+    }
+    
+ 
+ }
